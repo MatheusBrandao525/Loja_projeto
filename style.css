@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clear{
+    clear: both;
+}
+
+.conteiner{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.logo{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+.menu ul{
+    display: flex;
+    float: right;
+    list-style: none;
+    margin-right: 50px;
+    position: relative;
+}
+
+.menu ul>li{
+    padding: 20px 22px;
+    margin-top: 18px;
+
+}
+
+.menu li>a{
+    text-decoration: none;
+}
+
+#produto{
+    width: 250px;
+    height: 30px;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgb(253, 253, 253);
+    position: absolute;
+    margin-top: -55px;
+    margin-left: 445px;
+    z-index: 100;
+    justify-content: center;
+}
+
+#buscar{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(253, 253, 253);
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 700px;
+    z-index: 100;
+    justify-content: center;
+}
