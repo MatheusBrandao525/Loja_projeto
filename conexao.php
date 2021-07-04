@@ -1,6 +1,6 @@
 <?php
     $servidor ="Localhost";
-    $usuario ="root";
+    $usuario ="Matheus";
     $senha ="matheus525";
     $banco ="db_talisma";
 

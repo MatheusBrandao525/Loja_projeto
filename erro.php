@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-
+<meta charset="utf-8">
+<title>Minha Loja - Logon de usuário</title>
+	
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	
 <!-- Latest compiled and minified CSS -->
@@ -23,10 +24,11 @@
 	
 </style>
 	
-
+	
 </head>
-<body>
 
+<body>
+	
 <?php
 	
 	include 'conexao.php';	
@@ -40,41 +42,27 @@
 	
 		<div class="row">
 		
-			<div class="col-sm-4 col-sm-offset-4">
+			<div class="col-sm-4 col-sm-offset-4 text-center">
 				
-				<h2>Logon de Usuário</h2>
-				<form name="frmusuario" method="post" action="validausuario.php">
-					<div class="form-group">
+				<h2>Usuário ou senha incorreto!!</h2>
 				
-						<label for="email">Email</label>
-						<input name="txtemail" type="email" class="form-control" required id="email">
-					</div>
+				<a href="logon.php" class="btn btn-block btn-default" role="button">Tentar Novamente</a>
 				
-				<div class="form-group">
-				
-						<label for="senha">Senha</label>
-						<input name="txtsenha" type="password" class="form-control" required id="senha">
-				</div>
-				
-							
-				<button type="submit" class="btn btn-lg btn-default">
-					
-					<span class="glyphicon glyphicon-ok"> Entrar</span>
-					
-				</button>
-				<a href="formusuario.php">
+                <a href="formusuario.php">
 				<button type="button" class="btn btn-lg btn-link">
 					
 					Ainda não sou cadastrado
 					
 				</button>
-				</a>
-				</form>			
+				</a>			
 			</div>
 		</div>
 	</div>
 	
 	<?php include 'footer.html' ?>
-    
+	
+	
+	
+	
 </body>
 </html>

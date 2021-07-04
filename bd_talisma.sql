@@ -42,9 +42,37 @@ values(default,'Decoração'),
 (default, 'Vidraçaria'),
 (default, 'Marmoraria');
 
+select * from tbl_categoria;
+
 insert into tbl_vendedor
-values(default, "256"),
-(default,"Matheus Felipe");
+values(default,"Matheus Felipe");
+
+insert into tbl_produto
+values(default, '4','1','Nome do produto','1', '59.70', '999', 'Descrição do produto', 'adobe-lightroom', 'N'),
+(default, '85445-5455','2','Nome do produto','1', '87.70', '999', 'Descrição do produto', 'bancomysql', 'N'),
+(default, '85445-5455','4','Nome do produto','1', '87.70', '999', 'Descrição do produto', 'bigdata', 'N'),
+(default, '85445-5455','5','Nome do produto','1', '87.70', '999', 'Descrição do produto', 'bootstrap', 'N');
+
+select * from tbl_produto;
+
+create view vw_produto
+as select
+	tbl_produto.cd_produto,
+    tbl_produto.no_isbm,
+    tbl_categoria.ds_categoria,
+    tbl_produto.nm_produto,
+    tbl_vendedor.nm_vendedor,
+    tbl_produto.vl_preco,
+    tbl_produto.qt_estoque,
+    tbl_produto.ds_descricao_produto,
+    tbl_produto.ds_capa,
+    tbl_produto.sg_lancamento
+from tbl_produto inner join tbl_vendedor
+	on tbl_produto.cd_vendedor = tbl_vendedor.cd_vendedor
+inner join tbl_categoria 
+	on tbl_produto.cd_categoria = tbl_categoria.cd_categoria;
+    
+select * from vw_produto;
 
 create table db_usuario(
 	cd_usuario int primary key auto_increment,
