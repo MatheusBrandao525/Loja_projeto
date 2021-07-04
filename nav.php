@@ -34,7 +34,7 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Contato</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"> Logon</a></li>
+            <li><a href="logon.php"><span class="glyphicon glyphicon-log-in"> Logon</a></li>
         </ul>
         </div> <!--/.navbar-collapse-->
     </div> <!--/.container-fluid-->

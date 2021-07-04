@@ -26,68 +26,25 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3">
-                <img src="https://th.bing.com/th/id/R43620c4523f2e554964864485c693976?rik=k1Iby6aJ8qmT8w&pid=ImgRaw/450x320" class="img-responsive" style="width: 100%;  height: 200px;" alt="">
-                <div><h1>Nome do produto</h1></div>
-                <div class="baixo"><h4>R$500,00</h4>
-                <button> <a href="">comprar</a></button>
+                <img src="capa_exemplo.jpg" class="img-responsive" style="width: 100%;  height: 300px;" alt="">
+                <div><h3>Nome do produto</h3></div>
+                <div><h4>R$500,00</h4></div>
+
+                <div class="center">
+                    <button class="btn btn-lg btn-block btn-info">
+                        <span class="glyphicon glyphicon-info-sign"> Detalhes</span>
+                    </button>
                 </div>
+
+                <div class="center" style="margin-top: 5px; margin-bottom:5px;">
+                    <button class="btn btn-lg btn-block btn-danger">
+                        <span class="glyphicon glyphicon-usd"> Comprar</span>
+                    </button>
+                </div>
+
             </div>
 
-            <div class="col-sm-3">
-                <img src="https://http2.mlstatic.com/como-montar-loja-de-material-de-construco-e-book-D_NQ_NP_638794-MLB27795903641_072018-F.jpg/450x320" class="img-responsive" style="width: 100%; height: 200px;" alt="">
-                <div><h1>Nome do produto</h1></div>
-                <div class="baixo"><h4>R$500,00</h4>
-                <button>comprar</button>
-                </div>
-            </div>
 
-            <div class="col-sm-3">
-                <img src="https://th.bing.com/th/id/R43620c4523f2e554964864485c693976?rik=k1Iby6aJ8qmT8w&pid=ImgRaw/450x320" class="img-responsive" style="width: 100%;  height: 200px;" alt="">
-                <div><h1>Nome do produto</h1></div>
-                <div class="baixo"><h4>R$500,00</h4>
-                <button>comprar</button>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <img src="https://http2.mlstatic.com/como-montar-loja-de-material-de-construco-e-book-D_NQ_NP_638794-MLB27795903641_072018-F.jpg/450x320" class="img-responsive" style="width: 100%; height: 200px;" alt="">
-                <div><h1>Nome do produto</h1></div>
-                <div class="baixo"><h4>R$500,00</h4>
-                <button>comprar</button>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <img src="https://th.bing.com/th/id/R43620c4523f2e554964864485c693976?rik=k1Iby6aJ8qmT8w&pid=ImgRaw/450x320" class="img-responsive" style="width: 100%;  height: 200px;" alt="">
-                <div><h1>Nome do produto</h1></div>
-                <div class="baixo"><h4>R$500,00</h4>
-                <button>comprar</button>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <img src="https://th.bing.com/th/id/R43620c4523f2e554964864485c693976?rik=k1Iby6aJ8qmT8w&pid=ImgRaw/450x320" class="img-responsive" style="width: 100%;  height: 200px;" alt="">
-                <div><h1>Nome do produto</h1></div>
-                <div class="baixo"><h4>R$500,00</h4>
-                <button>comprar</button>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <img src="https://th.bing.com/th/id/R43620c4523f2e554964864485c693976?rik=k1Iby6aJ8qmT8w&pid=ImgRaw/450x320" class="img-responsive" style="width: 100%;  height: 200px;" alt="">
-                <div><h1>Nome do produto</h1></div>
-                <div class="baixo"><h4>R$500,00</h4>
-                <button>comprar</button>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <img src="https://th.bing.com/th/id/R43620c4523f2e554964864485c693976?rik=k1Iby6aJ8qmT8w&pid=ImgRaw/450x320" class="img-responsive" style="width: 100%;  height: 200px;" alt="">
-                <div><h1>Nome do produto</h1></div>
-                <div class="baixo"><h4>R$500,00</h4>
-                <button>comprar</button>
-                </div>
-            </div>
         </div><!--row-->
     </div><!--container-fluid-->
     <?php

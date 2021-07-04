@@ -36,32 +36,36 @@ create table tbl_produto
     default character set utf8;
     
 insert into tbl_categoria
-values(default,'Design'),
-(default, 'Infraestrutura'),
-(default, 'Dados'),
-(default, 'Front-end'),
-(default, 'Mobile');
-
+values(default,'Decoração'),
+(default, 'Construção'),
+(default, 'Pintura'),
+(default, 'Vidraçaria'),
+(default, 'Marmoraria');
 
 insert into tbl_vendedor
-values(default,'Talismã'),		-- codigo 1
-(default, 'Talismã'),					-- codigo 2	
-(default, 'Talismã'),					-- codigo 3
-(default, 'Talismã'),				-- codigo 4
-(default, 'Talismã'),				-- codigo 5
-(default, 'Talismã'),				-- codigo 6
-(default, 'Talismã'),					-- codigo 7
-(default, 'Talismã'),			-- codigo 8
-(default, 'Talismã'),					-- codigo 9
-(default, 'Talismã'),				    -- codigo 10
-(default, 'Talismã'),				    -- codigo 11
-(default, 'Talismã'),		-- codigo 12
-(default, 'Talismã'),				-- codigo 13
-(default, 'Talismã'),				    -- codigo 14
-(default, 'Talismã'),		-- codigo 15
-(default, 'Talismã'),				    -- codigo 16
-(default, 'Talismã'),			    -- codigo 17
-(default, 'Talismã');				    -- codigo 18
+values(default, "256"),
+(default,"Matheus Felipe");
 
-create user 'Matheus'@'localhost' identified WITH mysql_native_passwword by 'brandao1010';
-grant all privileges on Matheus.* to 'Matheus'@'localhost' with grant option;
+create table db_usuario(
+	cd_usuario int primary key auto_increment,
+    nm_usuario varchar(80) not null,
+    ds_email varchar(80) not null,
+    ds_senha varchar(10) not null,
+    ds_status boolean not null,
+    ds_endereco varchar(80) not null,
+    ds_cidade varchar(30) not null,
+    no_cep char(9) not null
+) 	default charset utf8;
+
+insert db_usuario
+values(default,'Matheus Felipe', 'mafe123silva@gmail.com', 'matheus525', '1', 'Br429 km90', 'São Francisco', '76935-000'); 
+
+insert db_usuario
+values(default,'Jaine Rodrigues', 'rodrigues@gmail.com', 'jaine525', '0', 'Br429 km93', 'São Francisco', '76935-000'); 
+
+select * from db_usuario;
+
+
+create user "Matheus"@"localhost" identified with mysql_native_password by"matheus525";
+grant all privileges on db_talisma.* to "Matheus"@"localhost" with grant option;
+
