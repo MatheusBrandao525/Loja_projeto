@@ -27,7 +27,7 @@
     include'cabecalho.html';
      
     // variaavel consulta vai receber variavel $cn que receberá o resultado de uma consulta.
-    $consulta = $cn->query('select nm_produto, vl_preco, ds_capa, qt_estoque, cd_produto from vw_produto');
+    $consulta = $cn->query('select nm_produto, vl_preco, ds_capa, qt_estoque, cd_produto from vw_produto where sg_lancamento= "S"');
 
     ?>;
 

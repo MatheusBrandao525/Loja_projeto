@@ -25,9 +25,10 @@
     include'conexao.php';
     include'nav.php';
     include'cabecalho.html';
-     
+    $cat = $_GET['cat'];
+
     // variaavel consulta vai receber variavel $cn que receberá o resultado de uma consulta.
-    $consulta = $cn->query('select nm_produto, vl_preco, ds_capa, qt_estoque, cd_produto from vw_produto');
+    $consulta = $cn->query("select nm_produto, vl_preco, ds_capa,cd_produto, qt_estoque from vw_produto where ds_categoria ='$cat'");
 
     ?>;
 

@@ -13,22 +13,22 @@
         <!--Colete os links de navegação, formulários e outros conteúdos para alternar-->
         <div class ="collapse navbar-collapse" id ="bs-example-navbar-collapse-1">
         <ul class ="nav navbar-nav">
-            <li><a href="#">Home<span class ="sr-only">(atual)</span></a></li>
-            <li><a href="#">Lançamentos</a></li>
+            <li><a href="index.php">Home<span class ="sr-only">(atual)</span></a></li>
+            <li><a href="lanc.php">Lançamentos</a></li>
             <li class ="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class = "caret"> </span> </a>
             <ul class="dropdown-menu">
-                <li><a href="#">Decoração</a></li>
-                <li><a href="#">Construção</a></li>
-                <li><a href="#">Pintura</a></li>
-                <li><a href="#">Vidraçaria</a></li>
-                <li><a href="#">Marmoraria</a></li>
+                <li><a href="categorias.php?cat=Decoração">Decoração</a></li>
+                <li><a href="categorias.php?cat=Construção">Construção</a></li>
+                <li><a href="categorias.php?cat=Pintura">Pintura</a></li>
+                <li><a href="categorias.php?cat=Vidraçaria">Vidraçaria</a></li>
+                <li><a href="categorias.php?cat=Marmoraria">Marmoraria</a></li>
             </ul>
             </li>
         </ul>
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" name="frmpesquisa" method="get" action="busca.php">
             <div class="form-group">
-            <input type="text" class="form-control" placeholder="Pesquisar">
+            <input type="text" class="form-control" placeholder="Pesquisar" name="txtpesquisar">
             </div>
             <button type="submit" class="btn btn-default">Pesquisar</button>
         </form>

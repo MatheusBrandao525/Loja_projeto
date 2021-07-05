@@ -48,10 +48,10 @@ insert into tbl_vendedor
 values(default,"Matheus Felipe");
 
 insert into tbl_produto
-values(default, '4','1','Nome do produto','1', '59.70', '999', 'Descrição do produto', 'adobe-lightroom', 'N'),
+values(default, '4','1','Nome do produto','1', '59.70', '999', 'Descrição do produto', 'adobe-lightroom', 'S'),
 (default, '85445-5455','2','Nome do produto','1', '87.70', '999', 'Descrição do produto', 'bancomysql', 'N'),
-(default, '85445-5455','4','Nome do produto','1', '87.70', '999', 'Descrição do produto', 'bigdata', 'N'),
-(default, '85445-5455','5','Nome do produto','1', '87.70', '999', 'Descrição do produto', 'bootstrap', 'N');
+(default, '85445-5455','4','Nome do produto','1', '87.70', '999', 'Descrição do produto', 'bigdata', 'S'),
+(default, '85445-5455','5','Nome do produto','1', '87.70', '0', 'Descrição do produto', 'bootstrap', 'N');
 
 select * from tbl_produto;
 
@@ -72,7 +72,9 @@ from tbl_produto inner join tbl_vendedor
 inner join tbl_categoria 
 	on tbl_produto.cd_categoria = tbl_categoria.cd_categoria;
     
-select * from vw_produto;
+select * from vw_produto where cd_produto = '5';
+
+select nm_produto, vl_preco, ds_capa, qt_estoque from vw_produto where ds_categoria ="";
 
 create table db_usuario(
 	cd_usuario int primary key auto_increment,
