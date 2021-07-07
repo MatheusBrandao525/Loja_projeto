@@ -1,8 +1,8 @@
 <?php
     $servidor ="Localhost";
-    $usuario ="Matheus";
+    $usuario ="MatheusB";
     $senha ="matheus525";
-    $banco ="db_talisma";
+    $banco ="db_loja1";
 
     $cn = new PDO("mysql:host=$servidor;dbname=$banco", $usuario, $senha);
 ?>

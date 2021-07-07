@@ -1,20 +1,13 @@
-create database db_talisma
+create database db_loja1
 default character set utf8
 default collate utf8_general_ci;
 
-use db_talisma;
+use db_loja1;
 
 create table tbl_categoria
 (
 	cd_categoria int primary key auto_increment,
     ds_categoria varchar(25) not null
-)
-default character set utf8;
-
-create table tbl_vendedor
-(
-	cd_vendedor int primary key auto_increment,
-    nm_vendedor varchar(45) not null
 )
 default character set utf8;
 
@@ -24,19 +17,22 @@ create table tbl_produto
     no_isbm varchar(17) not null,
     cd_categoria int not null,
     nm_produto varchar(70) not null,
-    cd_vendedor int not null,
     vl_preco decimal(6,2) not null,
     qt_estoque int not null,
     ds_descricao_produto text not null,
     ds_capa varchar(255) not null,
-    sg_lancamento enum('S', 'N') not null,
-    constraint fk_cat foreign key(cd_categoria) references tbl_categoria(cd_categoria),
-    constraint fk_vendedor foreign key(cd_vendedor) references tbl_vendedor(cd_vendedor)
+    sg_lancamento enum('S', 'N') not null
     )
     default character set utf8;
     
+    create table tbl_vendedor
+(
+	cd_vendedor int primary key auto_increment,
+    nm_vendedor varchar(45) not null
+)
+default character set utf8;
     
-insert into tbl_categoria
+    insert into tbl_categoria
 values(default,'Decoração'),
 (default, 'Construção'),
 (default, 'Pintura'),
@@ -45,15 +41,11 @@ values(default,'Decoração'),
 
 select * from tbl_categoria;
 
-insert into tbl_vendedor
-values(default,"Matheus Felipe");
-
 insert into tbl_produto
-values(default, '4','2','Cimento','1', '59.70', '999', 'Descrição do produto', 'adobe-lightroom', 'S'),
-(default, '85445-5455','2','Tijolo','1', '87.70', '999', 'Descrição do produto', 'bancomysql', 'N'),
-(default, '85445-5455','4','Nome do produto','1', '87.70', '999', 'Descrição do produto', 'bigdata', 'S'),
-(default, '85445-5455','5','Nome do produto','1', '87.70', '0', 'Descrição do produto', 'bootstrap', 'N');
-
+values(default, '4','2','Cimento', '59.70', '999', 'Descrição do produto', 'adobe-lightroom', 'S'),
+(default, '85445-5455','2','Tijolo', '87.70', '999', 'Descrição do produto', 'bancomysql', 'N'),
+(default, '85445-5455','4','Nome do produto', '87.70', '999', 'Descrição do produto', 'bigdata', 'S'),
+(default, '85445-5455','5','Nome do produto', '87.70', '0', 'Descrição do produto', 'bootstrap', 'N');
 
 select * from tbl_produto;
 
@@ -63,20 +55,22 @@ as select
     tbl_produto.no_isbm,
     tbl_categoria.ds_categoria,
     tbl_produto.nm_produto,
-    tbl_vendedor.nm_vendedor,
+    tbl_categoria.cd_categoria,
     tbl_produto.vl_preco,
     tbl_produto.qt_estoque,
     tbl_produto.ds_descricao_produto,
     tbl_produto.ds_capa,
     tbl_produto.sg_lancamento
-from tbl_produto inner join tbl_vendedor
-	on tbl_produto.cd_vendedor = tbl_vendedor.cd_vendedor
-inner join tbl_categoria 
+from tbl_produto inner join tbl_categoria
 	on tbl_produto.cd_categoria = tbl_categoria.cd_categoria;
     
-select * from vw_produto where cd_produto = '5';
+    select * from vw_produto where cd_produto = '5';
+    
+    select nm_produto, vl_preco, ds_capa, qt_estoque from vw_produto where ds_categoria ="";
 
-select nm_produto, vl_preco, ds_capa, qt_estoque from vw_produto where ds_categoria ="";
+
+    insert into tbl_vendedor
+values(default,"Matheus Felipe");
 
 create table db_usuario(
 	cd_usuario int primary key auto_increment,
@@ -97,7 +91,5 @@ values(default,'Jaine Rodrigues', 'rodrigues@gmail.com', 'jaine525', '0', 'Br429
 
 select * from db_usuario;
 
-
-create user "Matheus"@"localhost" identified with mysql_native_password by"matheus525";
+create user "MatheusB"@"localhost" identified with mysql_native_password by"matheus525";
 grant all privileges on db_talisma.* to "Matheus"@"localhost" with grant option;
-

@@ -38,10 +38,16 @@
 	include 'nav.php';
 	include 'cabecalho.html';
 	
+	if(empty($_GET['txtpesquisar'])) {
+		echo "<html><script>location.href='index.php'</script></html>";
+	}
+
     $pesquisa = $_GET['txtpesquisar'];
     $consulta = $cn->query("select * from vw_produto where nm_produto like concat('%','$pesquisa','%') or ds_descricao_produto like concat ('%','$pesquisa','%')");
 
-
+	if( $consulta->rowCount() ==0 ) {
+		echo "<html><script>location.href='erro2.php'</script></html>";
+	}
 	
 	?>
 	
